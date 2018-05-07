@@ -11,6 +11,9 @@
         
             {{#if !devoured}}
             {{#each burgers}}
+            <li>{{name}}
+        	<button class="eat-burger" data-id="{{id}}">DEVOUR IT!</button>
+            </li>
             {{/each}}
             {{/if}}
         </ul>
@@ -22,6 +25,7 @@
         
             {{#if devoured}}
             {{#each burgers}}
+            <li>{{name}}</li>
             {{/each}}
             {{/if}}
         </ul>
