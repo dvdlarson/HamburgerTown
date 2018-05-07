@@ -1,11 +1,11 @@
 
 <div class="container">
-    <div class="row text-center">
-        <div class="col-md-12">
+    <div id="burgerarea" class="row text-center">
+        <div  class="col-md-12">
         <h1>Hamburger Town!</h1>
         </div>
         <div class="col-md-6">
-        <h2>Burgers still available!</h2>
+        <h2>Burgers available to eat:</h2>
 
         <ul>
          {{#each burgers}}
@@ -32,8 +32,9 @@
         </div>{{!--eaten--}}
 <div class="col-md-12" id="add-burger">
   <form class="add-burger">
-    Create a burger:
+    <h3>Create a burger:</h3><br>
     <input type="text" id="newBurger" name="newBurger">
+    <br>
     <button type ="submit">Submit</button>
 </form>
 </div>

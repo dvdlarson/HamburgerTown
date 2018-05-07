@@ -1,0 +1,44 @@
+body {
+    background-image:url("../img/burger.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    height:100%
+}
+
+html {
+    height:100%
+}
+
+
+li {
+    list-style:none;
+}
+.bg {
+    /* The image used */
+    background-image: url("../img/burger.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.burgerlist {
+    height:20px;
+    width:100%;
+    font-size:1.5rem;
+    border:1px, solid, ghostwhite;
+}
+
+#newBurger {
+    width:300px;
+    text-align:center;
+}
+#burgerarea {
+    background-color:rgba(255, 255, 255, 0.4);
+    color:black;
+}
