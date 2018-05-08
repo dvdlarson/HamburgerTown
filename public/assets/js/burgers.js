@@ -8,14 +8,16 @@ $(function () {
       var newBurger = {
       name: $("#newBurger").val().trim()
       };
+      $("#newBurger").empty();//this is not working to clear out the form!
+      $("#burgerform")[0].reset();
       console.log("attempting to add: "+newBurger.name);
-
       $.ajax("/api/burgers", {
           type: "POST",
           data: newBurger
       }).then(function () {
           console.log("Added new burger: " + newBurger.name);
           location.reload();
+          
       });
   });
 
@@ -24,15 +26,16 @@ $(function () {
   $(".eatIt").click(function (event) {
       event.preventDefault();
       var id = $(this).data("id");
-      console.log("munched ID# " + id );
+      
       var eaten = {
-          devoured: 1
+          devoured: true
               };
 
       $.ajax("/api/burgers/" + id, {
           type: "PUT",
           data: eaten
       }).then(function () {
+        console.log("munched ID# " + id );
           location.reload();
       });
   });

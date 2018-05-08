@@ -11,6 +11,23 @@ html {
 }
 
 
+
+#siteTitle {
+    font-family: 'Bungee Shade', cursive;
+    font-size:5rem;
+}
+
+#createTitle {
+    font-family: 'Bungee', cursive;
+    font-size:20px;
+    margin-bottom:-10px;
+}
+
+.columnTitle {
+    font-family: 'Bungee', cursive;
+    font-size:30px;
+}
+
 li {
     list-style:none;
 }
@@ -28,10 +45,11 @@ li {
 }
 
 .burgerlist {
-    height:20px;
+    height:25px;
+    margin-bottom:5px;
     width:100%;
     font-size:1.5rem;
-    border:1px, solid, ghostwhite;
+    
 }
 
 #newBurger {

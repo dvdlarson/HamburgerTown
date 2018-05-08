@@ -2,10 +2,10 @@
 <div class="container">
     <div id="burgerarea" class="row text-center">
         <div  class="col-md-12">
-        <h1>Hamburger Town!</h1>
+        <h1 id="siteTitle">Hamburger Town!</h1>
         </div>
         <div class="col-md-6">
-        <h2>Burgers available to eat:</h2>
+        <h2 class="columnTitle">Burgers available to eat:</h2>
 
         <ul>
          {{#each burgers}}
@@ -19,7 +19,7 @@
         </ul>
         </div>{{!--uneaten--}}
         <div class="col-md-6">
-        <h2>Burgers already eaten</h2>
+        <h2 class="columnTitle">Burgers already eaten</h2>
 
         <ul>
             {{#each burgers}}
@@ -31,8 +31,8 @@
         </ul>
         </div>{{!--eaten--}}
 <div class="col-md-12" id="add-burger">
-  <form class="add-burger">
-    <h3>Create a burger:</h3><br>
+  <form id="burgerform" class="add-burger">
+    <div class="row text-center formtitle" id="createTitle">Create a burger:</div><br>
     <input type="text" id="newBurger" name="newBurger">
     <br>
     <button type ="submit">Submit</button>
