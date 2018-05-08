@@ -25,6 +25,9 @@ $(function () {
   //eat a burger
   $(".eatIt").click(function (event) {
       event.preventDefault();
+      var audio = new Audio('../assets/img/burger.mp3');
+      audio.play();
+      audio.onended = function(){
       var id = $(this).data("id");
       
       var eaten = {
@@ -38,6 +41,11 @@ $(function () {
         console.log("munched ID# " + id );
           location.reload();
       });
+    }
+
   });
+
+
+
 });
   
