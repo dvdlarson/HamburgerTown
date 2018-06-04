@@ -2,13 +2,13 @@
 
 $(function () {
 
-  //add a burger
+
   $(".add-burger").on("submit", function (event) {
       event.preventDefault();
       var newBurger = {
       name: $("#newBurger").val().trim()
       };
-      $("#newBurger").empty();//this is not working to clear out the form!
+      $("#newBurger").empty();
       $("#burgerform")[0].reset();
       console.log("attempting to add: "+newBurger.name);
       $.ajax("/api/burgers", {
@@ -22,12 +22,13 @@ $(function () {
   });
 
 
-  //eat a burger
-  $(".eatIt").click(function (event) {
+
+  $(".eat-burger").click(function (event) {
       event.preventDefault();
-      var audio = new Audio('../assets/img/burger.mp3');
-      audio.play();
-      audio.onended = function(){
+      //i tried.
+      // var audio = new Audio('../assets/img/burger.mp3');
+      // audio.play();
+      // audio.onended = function(){
       var id = $(this).data("id");
       
       var eaten = {
@@ -41,7 +42,7 @@ $(function () {
         console.log("munched ID# " + id );
           location.reload();
       });
-    }
+  //  }
 
   });
 
